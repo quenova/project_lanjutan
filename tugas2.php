@@ -15,19 +15,42 @@
     <input type="number" name="nilai_2">
     <input type="submit" name="cetak" value="hitung">
 </form>
+<hr>
 <?php
 if(isset($_POST['cetak'])) {
     $nilai_1 = $_POST['nilai_1'];
     $nilai_2 = $_POST['nilai_2'];
-    echo "masukan : " .$nilai;
+    echo "Bilangan 1 : " .$nilai_1;
     echo "<br>";
-    for($i=1; $i<=nilai; $i++) {
-        for($j=1; $j<=$i; $j++) {
-            echo "$";
-        }
+    echo "Bilangan 2 : " .$nilai_2;
+    echo "<hr>";
+    function tambah($nilai_1, $nilai_2) {
+        $tambah = $nilai_1 + $nilai_2;
+        echo "Hasil Penjumlahan adalah = " .$tambah;
         echo "<br>";
     }
-}
+    function kurang($nilai_1, $nilai_2) {
+        $kurang = $nilai_1 - $nilai_2;
+        echo "Hasil dari pengurangan diatas adalah = ".$kurang;
+        echo "<br>";
+    }
+    function kali($nilai_1, $nilai_2) {
+        $kali = $nilai_1 * $nilai_2;
+        echo "Hasil dari perkalian diatas adalah = ".$kali;
+        echo "<br>";
+    } 
+    function bagi($nilai_1, $nilai_2) {
+        $bagi = $nilai_1 / $nilai_2;
+        echo "Hasil dari pembagian diatas adalah = ".$bagi;
+        echo "<br>";
+    }
+    tambah($nilai_1, $nilai_2);
+    kurang($nilai_1, $nilai_2);
+    kali($nilai_1, $nilai_2);
+    bagi($nilai_1, $nilai_2);
+    }
 ?>
+<br>
+<h5> Nova Dwi Anggaraini</h5>
 </body>
 </html>
